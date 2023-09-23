@@ -83,15 +83,13 @@ nav {margin-right: 200px;}
   right: 10px;
 }
 
-.navbar-form-btn ion-icon,
-.navbar-search-btn ion-icon {
+.navbar-form-btn ion-icon, .navbar-search-btn ion-icon {
   font-size: 20px;
   color: var(--light-azure);
   --ionicon-stroke-width:50px;
 }
 
-.navbar-form-btn:hover ion-icon,
-.navbar-form-search::placeholder {color: var(--off-white);}
+.navbar-form-btn:hover ion-icon, .navbar-form-search::placeholder {color: var(--off-white);}
 
 /* navbar-form close button &navbar search button for small device */
 
@@ -102,6 +100,13 @@ nav {margin-right: 200px;}
   display: flex;
   align-items: center;
   font-size: var(--fs-sm);
+}
+
+.navbar-signin ion-icon {
+  font-size: 20px;
+  color: var(--light-azure);
+  margin-left: 3px;
+  --ionicon-stroke-width: 30px;
 }
 
 .navbar-signin:hover span {color: var(--light-azure);}
