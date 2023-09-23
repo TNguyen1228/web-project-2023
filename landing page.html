@@ -9,7 +9,7 @@
 
     <link rel="stylesheet" href="./css/main.css">
     <link rel="stylesheet" href="./css/media_query.css">
-
+    <link rel="stylesheet" href="./css/variable.css">
     <link href="https://fonts.googleapis.com/css?family=Inter:100,200,300,regular,500,600,700,800,900" rel="stylesheet">
 </head>
 
@@ -53,14 +53,153 @@
                     
                         <a href="./login page.html" class="navbar-signin">
                             <span>Sign in</span>
-                            <ion-icon class="log-in-outline"></ion-icon>
-                        </a>
-                    
+                            <ion-icon name="log-in-outline"></ion-icon>
+                        </a>  
                 </div>
             </div>
         </header>
     
-    
+        <!-- MAIN SECTION -->
+        <main>
+
+            <!-- Banner section -->
+            <section class="banner">
+                <div class="banner-card">
+                    <a href=""><img src="./images/movies/john-wick-4-poster-4k-wallpaper-uhdpaper.com-641@0@g.jpg" class="banner-img" ></a>
+                    <div class="card-content">
+                        <div class="card-info">
+                            <div class="genre">
+                                <ion-icon name="film"></ion-icon>
+                                <span>Action/Thriller/Crime</span>
+                            </div>
+
+                            <div class="year">
+                                <ion-icon name="calendar"></ion-icon>
+                                <span>2023</span>
+                            </div>
+
+                            <div class="duration">
+                                <ion-icon name="time"></ion-icon>
+                                <span>2h50m</span>
+                            </div>
+
+                            <div class="quality">4K</div>
+                        </div>
+                        <h2 class="card-title" style="text-shadow: gray 1px;">John Wick: Chapter 4</h2>
+                    </div>
+                    
+                </div>
+            </section>
+
+            <!-- Movie section -->
+            <section class="movies">
+
+                <!-- filter bar -->
+                <div class="filter-bar">
+
+                    <div class="filter-dropdowns">
+
+                        <select name="genre" class="genre">
+                            <option value="all genres">All Genres</option>
+                            <option value="action">Action</option>
+                            <option value="adventure">Adventure</option>
+                            <option value="animal">Animal</option>
+                            <option value="cartoon">Cartoon</option>
+                            <option value="biography">Biography</option>
+                        </select>
+
+                        <select name="year" class="year" >
+                            <option value="all years">All the years</option>
+                            <option value="2024">2024</option>
+                            <option value="2020-2023">2020-2023</option>
+                            <option value="2010-2019">2010-2019</option>
+                            <option value="2000-2009">All Genres</option>
+                        </select>
+
+                    </div>
+
+                    <div class="filter-radios">
+                        <input type="radio" name="grade" id="featured" checked>
+                        <label for="featured">Featured</label>
+                        
+                        <input type="radio" name="grade" id="popular">
+                        <label for="popular">Popular</label>
+
+                        <input type="radio" name="grade" id="newest">
+                        <label for="newest">Newest</label>
+
+                        <div class="checked-radio-bg"></div>
+                    </div>
+
+                </div>
+
+                <!-- movie grid -->
+                <div class="movies-grid">
+                    <div class="movie-card">
+                        <div class="card-head">
+                            <img src="./images/movies/red-notice.jpg" alt="" class="card-img">
+
+                            <div class="card-overlay">
+
+                                <div class="bookmark">
+                                    <ion-icon name="bookmark-outline"></ion-icon>
+                                </div>
+
+                                <div class="rating">
+                                    <ion-icon name="star-outline"></ion-icon>
+                                    <span>6.4</span>
+                                </div>
+
+                                <div class="play">
+                                    <ionicon name="play-circle-outline"></ionicon>
+                                </div>
+
+                            </div>
+                        </div>
+
+                        <div class="card-body">
+                            <h3 class="card-title">Red Notice</h3>
+
+                            <div class="card-info">
+                                <span class="genre">Action/Comedy</span>
+                                <span class="year">2021</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="movie-card">
+                        <div class="card-head">
+                            <img src="./images/movies/spider-men.jpg" alt="" class="card-img">
+
+                            <div class="card-overlay">
+
+                                <div class="bookmark">
+                                    <ion-icon name="bookmark-outline"></ion-icon>
+                                </div>
+
+                                <div class="rating">
+                                    <ion-icon name="star-outline"></ion-icon>
+                                    <span>6.4</span>
+                                </div>
+
+                                <div class="play">
+                                    <ionicon name="play-circle-outline"></ionicon>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="card-body">
+                            <h3 class="card-title">Spider-man: Homecoming</h3>
+
+                            <div class="card-info">
+                                <span class="genre">Action/Adventure</span>
+                                <span class="year">2017</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+        </main>
     
     </div>
     

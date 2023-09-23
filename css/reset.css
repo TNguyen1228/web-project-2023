@@ -3,7 +3,7 @@
 * {
     margin: 0;
     padding: 0;
-    transform: all 0.5 ease;
+    transition: all .5s ease;
 }
 
 /* more-intuitive box-sizing model */
