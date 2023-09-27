@@ -5,7 +5,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Movies Home</title>
+    <title>Wflex</title>
     <link rel="icon" type="image/x-icon" href="./images/icon/favicon.ico">
     <link rel="stylesheet" href="./css/main.css">
     <link rel="stylesheet" href="./css/media_query.css">
@@ -23,7 +23,7 @@
                     <span></span><span></span><span></span>
                 </button>
                 <a href="#" class="navbar-brand">
-                    <img src="./images/icon/favicon-32x32.png" alt="">
+                    <button onClick="window.location.reload();"><img src="./images/icon/favicon-32x32.png" alt=""></button>
                 </a>
                 <!-- Navbar navigation -->
                 <nav>
@@ -31,6 +31,7 @@
                         <li><a href="#" class="navbar-link">Home</a></li>
                         <li><a href="#category" class="navbar-link">Category</a></li>
                         <!-- <li><a href="#live" class="navbar-link indicator">LIVE</a></li> -->
+                        <li><a href="#about" class="navbar-link">About</a></li>
                     </ul>
                 </nav>
                 <!-- Search and sign-in option -->
@@ -51,7 +52,7 @@
                             <ion-icon name="search-outline"></ion-icon>
                         </button>
                     
-                        <a href="./login page.html" class="navbar-signin">
+                        <a href="./login-page.html" class="navbar-signin">
                             <span>Sign in</span>
                             <ion-icon name="log-in-outline"></ion-icon>
                         </a>  
@@ -103,9 +104,12 @@
                             <option value="all genres">All Genres</option>
                             <option value="action">Action</option>
                             <option value="adventure">Adventure</option>
-                            <option value="animal">Animal</option>
-                            <option value="cartoon">Cartoon</option>
-                            <option value="biography">Biography</option>
+                            <option value="sci-fi">Sci-Fi</option>
+                            <option value="animation">Animation</option>
+                            <option value="war">War</option>
+                            <option value="horror">Horror</option>
+                            <option value="comedy">Comedy</option>
+                            <option value="crime">Crime</option>
                         </select>
 
                         <select name="year" class="year" >
@@ -160,7 +164,6 @@
 
                         <div class="card-body">
                             <h3 class="card-title">Red Notice</h3>
-
                             <div class="card-info">
                                 <span class="genre">Action/Comedy</span>
                                 <span class="year">2021</span>
@@ -814,7 +817,7 @@
 
             <!-- Category section -->
             <section class="category" id="category">
-                <h2 class="section-heading">Categories</h2>
+                <h2 class="section-heading">Category</h2>
                 <div class="category-grid">
 
                     <div class="category-card">
@@ -849,8 +852,8 @@
                      </div>
 
                      <div class="category-card">
-                        <img src="./images/drama.jpg" alt="" class="card-img"> 
-                         <div class="name">Drama</div>
+                        <img src="./images/adventure.jpg" alt="" class="card-img"> 
+                         <div class="name">Adventure</div>
                          <div class="total"> 100</div>
                      </div>
 
@@ -903,14 +906,14 @@
 
                             <li class="link-item"><a href="#">Account & Billing</a></li>
                             <li class="link-item"><a href="#">Plans & Pricing</a></li>
-                            <li class="link-item"><a href="#">Supporterd devices</a></li>
+                            <li class="link-item"><a href="#">Supported devices</a></li>
                             <li class="link-item"><a href="#">Accessibility</a></li>
                         </ul>
                     </div>
                 </div>
                 <div class="footer-copyright">
                     <div class="copyright">
-                        <p>&copy; Copyright 2023 CineFlix</p>
+                        <p>&copy; Copyright 2023 Wflex</p>
                     </div>
                     <div class="wrapper">
                         <a href="#">Privacy policy</a>
