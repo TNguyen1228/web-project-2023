@@ -21,7 +21,7 @@ header, nav {background: var(--rich-black-fogra-29);}
 .navbar {
   height: 100px;
   display: flex;
-  justify-content: space-between;
+  justify-content: space-evenly;
   align-items: center;
   top: 0;
 }
@@ -168,7 +168,7 @@ nav {margin-right: 200px;}
 }
 
 .banner-card .card-title {
-  font-size:  3cm;
+  font-size:  2cm;
   color: var(--white);
   text-shadow: 2px 0 2px #0007;
 }
@@ -538,3 +538,8 @@ ul .link-item:not(:last-child){margin-bottom: 10px;}
 .wrapper {display: flex;}
 
 .wrapper a:not(:last-child){margin-right: 30px;}
+
+/* The "show" class is added to the filtered elements */
+.show {
+  display: block;
+}
