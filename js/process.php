@@ -12,7 +12,7 @@ if ($conn->connect_error) {
 }
 
 // Process form 
-$firstname = $_GET['firstname'];
+$firstname = $_POST['firstname'];
 $lastname= $_POST['lastname'];
 $username = $_POST['username'];
 $password = $_POST['password'];

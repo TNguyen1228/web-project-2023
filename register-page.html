@@ -129,26 +129,25 @@
 </style>
 
 <body>
-  <script src="./js/register.js"></script>
   <div class="wrapper">
-    <form id="userForm" method=$POST>
+    <form id="userForm" action="./js/process.php" method="post">
       <h1>Registration</h1>
       <div class="input-box">
-        <input name='firstname' type="text" placeholder="First name" required>
+        <input  type="text"   placeholder="First name"  id='firstname'  name="firstname"  required>
       </div>
       <div class="input-box">
-        <input name="lastname" type="text" placeholder="Last name" id="lastname" required>
+        <input  type="text"   placeholder="Last name"   id="lastname"   name="lastname"   required>
       </div>
       <div class="input-box">
-        <input type="text" name="username" placeholder="Username" id="username" required>
+        <input type="text"    placeholder="Username"    id="username"   name="username"   required>
         <i class="bx bx-user"></i>
       </div>
       <div class="input-box">
-        <input type="password" name="password" placeholder="Password" id="password" required>
+        <input type="password"    placeholder="Password" id="password" name="password" required>
         <i class="bx bxs-lock-alt"></i>
       </div>
       <div class="input-box">
-        <input type="text" placeholder="Email" id="email">
+        <input type="text"        placeholder="Email"    id="email" name="email">
         <i class='bx bx-envelope'></i>
       </div>
       <button type="submit" class="button">Submit</button>
@@ -157,7 +156,7 @@
       </div>
     </form>
   </div>
-
+  <script src="./js/register.js"></script>
 </body>
 
 </html>
