@@ -5,7 +5,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Movies Home</title>
+    <title>Wflex</title>
     <link rel="icon" type="image/x-icon" href="./images/icon/favicon.ico">
     <link rel="stylesheet" href="./css/main.css">
     <link rel="stylesheet" href="./css/media_query.css">
@@ -16,56 +16,64 @@
 <body>
     <div class="container">
         <!-- HEADER SECTION -->
-        <header>
+        <header class="">
             <div class="navbar">
                 <!-- Menu button for small screen -->
-                <button class="navbar-menu-btn">
-                    <span></span><span></span><span></span>
+                <button class="navbar-menu-btn ">
+                    <span class="one"></span>
+                    <span class="two"></span>
+                    <span class="three"></span>
                 </button>
+
                 <a href="#" class="navbar-brand">
-                    <img src="./images/icon/favicon-32x32.png" alt="">
+                    <button onClick="window.location.reload();"><img src="./images/icon/favicon-32x32.png"
+                            alt=""></button>
                 </a>
+
                 <!-- Navbar navigation -->
-                <nav>
+
+                <nav class="">
                     <ul class="navbar-nav">
                         <li><a href="#" class="navbar-link">Home</a></li>
                         <li><a href="#category" class="navbar-link">Category</a></li>
                         <!-- <li><a href="#live" class="navbar-link indicator">LIVE</a></li> -->
-                    </ul>
+<!--                         <li><a href="#about" class="navbar-link">About</a></li>
+ -->                    </ul>
                 </nav>
                 <!-- Search and sign-in option -->
                 <div class="navbar-actions">
-                    <form action="#" class="navbar-form">
+                    <form action="#" class="navbar-form ">
                         <input type="text" name="search" placeholder=" Search..." class="navbar-form-search">
-                    
+
                         <button class="navbar-form-btn">
-                        <ion-icon name="search-outline"></ion-icon>
+                            <ion-icon name="search-outline"></ion-icon>
                         </button>
 
                         <button class="navbar-form-close">
                             <ion-icon name="close-circle-outline"></ion-icon>
                         </button>
                     </form>
-                        <!-- Search button for small screen -->
-                        <button class="navbar-search-btn">
-                            <ion-icon name="search-outline"></ion-icon>
-                        </button>
-                    
-                        <a href="./login page.html" class="navbar-signin">
-                            <span>Sign in</span>
-                            <ion-icon name="log-in-outline"></ion-icon>
-                        </a>  
+                    <!-- Search button for small screen -->
+                    <button class="navbar-search-btn">
+                        <ion-icon name="search-outline"></ion-icon>
+                    </button>
+
+                    <a href="./login-page.html" class="navbar-signin">
+                        <span>Sign in</span>
+                        <ion-icon name="log-in-outline"></ion-icon>
+                    </a>
                 </div>
             </div>
         </header>
-    
+
         <!-- MAIN SECTION -->
         <main>
 
             <!-- Banner section -->
             <section class="banner">
                 <div class="banner-card">
-                    <a href=""><img src="./images/movies/john-wick-4-poster-4k-wallpaper-uhdpaper.com-641@0@g.jpg" class="banner-img" ></a>
+                    <a href=""><img src="./images/movies/john-wick-4-poster-4k-wallpaper-uhdpaper.com-641@0@g.jpg"
+                            class="banner-img"></a>
                     <div class="card-content">
                         <div class="card-info">
                             <div class="genre">
@@ -87,7 +95,7 @@
                         </div>
                         <h2 class="card-title" style="text-shadow: gray 1px;">John Wick: Chapter 4</h2>
                     </div>
-                    
+
                 </div>
             </section>
 
@@ -99,16 +107,19 @@
 
                     <div class="filter-dropdowns">
 
-                        <select name="genre" class="genre">
-                            <option value="all genres">All Genres</option>
-                            <option value="action">Action</option>
-                            <option value="adventure">Adventure</option>
-                            <option value="animal">Animal</option>
-                            <option value="cartoon">Cartoon</option>
-                            <option value="biography">Biography</option>
+                        <select name="genre" class="genre" id="genre-filter">
+                            <option value="all">All Genres</option>
+                            <option value="action"> Action</option>
+                            <option value="adventure"> Adventure</option>
+                            <option value="sci-fi">Sci-Fi</option>
+                            <option value="animation">Animation</option>
+                            <option value="war">War</option>
+                            <option value="horror">Horror</option>
+                            <option value="comedy">Comedy</option>
+                            <option value="crime">Crime</option>
                         </select>
 
-                        <select name="year" class="year" >
+                        <select name="year" class="year">
                             <option value="all years">All the years</option>
                             <option value="2024">2024</option>
                             <option value="2020-2023">2020-2023</option>
@@ -122,7 +133,7 @@
                     <div class="filter-radios">
                         <input type="radio" name="grade" id="featured" checked>
                         <label for="featured">Featured</label>
-                        
+
                         <input type="radio" name="grade" id="popular">
                         <label for="popular">Popular</label>
 
@@ -153,6 +164,7 @@
 
                                 <div class="play">
                                     <ion-icon name="play-circle-outline"></ion-icon>
+                                    
                                 </div>
 
                             </div>
@@ -160,10 +172,9 @@
 
                         <div class="card-body">
                             <h3 class="card-title">Red Notice</h3>
-
                             <div class="card-info">
-                                <span class="genre">Action/Comedy</span>
-                                <span class="year">2021</span>
+                                <span class="genre action comedy">Action/Comedy</span>
+                                <span class="year 2021">2021</span>
                             </div>
                         </div>
                     </div>
@@ -192,8 +203,8 @@
                             <h3 class="card-title">Spider-man: Homecoming</h3>
 
                             <div class="card-info">
-                                <span class="genre">Action/Adventure</span>
-                                <span class="year">2017</span>
+                                <span class="genre action adventure">Action/Adventure</span>
+                                <span class="year 2017">2017</span>
                             </div>
                         </div>
                     </div>
@@ -224,8 +235,8 @@
                             <h3 class="card-title">Eternals</h3>
 
                             <div class="card-info">
-                                <span class="genre">Action/Adventure/Fantasy</span>
-                                <span class="year">2021</span>
+                                <span class="genre action adventure comedy">Action/Adventure/Fantasy</span>
+                                <span class="year 2021">2021</span>
                             </div>
                         </div>
                     </div>
@@ -256,8 +267,8 @@
                             <h3 class="card-title">Shang-Chi and the Legend of the Ten Rings</h3>
 
                             <div class="card-info">
-                                <span class="genre">Action/Adventure/Fantasy</span>
-                                <span class="year">2021</span>
+                                <span class="genre action adventure fatasy">Action/Adventure/Fantasy</span>
+                                <span class="year 2021">2021</span>
                             </div>
                         </div>
                     </div>
@@ -288,8 +299,8 @@
                             <h3 class="card-title">Venom</h3>
 
                             <div class="card-info">
-                                <span class="genre">Action/Adventure/Sci-Fi</span>
-                                <span class="year">2018</span>
+                                <span class="genre action adventure sci-fi">Action/Adventure/Sci-Fi</span>
+                                <span class="year 2018">2018</span>
                             </div>
                         </div>
                     </div>
@@ -320,8 +331,8 @@
                             <h3 class="card-title">The Matrix Resurrections</h3>
 
                             <div class="card-info">
-                                <span class="genre">Action/Sci-Fi</span>
-                                <span class="year">2021</span>
+                                <span class="genre action sci-fi">Action/Sci-Fi</span>
+                                <span class="year 2021">2021</span>
                             </div>
                         </div>
                     </div>
@@ -352,8 +363,8 @@
                             <h3 class="card-title">Black Panther</h3>
 
                             <div class="card-info">
-                                <span class="genre">Action/Adventure/Sci-Fi</span>
-                                <span class="year">2018</span>
+                                <span class="genre action adventure sci-fi">Action/Adventure/Sci-Fi</span>
+                                <span class="year 2018">2018</span>
                             </div>
                         </div>
                     </div>
@@ -384,8 +395,8 @@
                             <h3 class="card-title">Interstellar</h3>
 
                             <div class="card-info">
-                                <span class="genre">Adventure/Drama/Sci-Fi</span>
-                                <span class="year">2014</span>
+                                <span class="genre adventure drama sci-fi">Adventure/Drama/Sci-Fi</span>
+                                <span class="year 2014">2014</span>
                             </div>
                         </div>
                     </div>
@@ -416,8 +427,8 @@
                             <h3 class="card-title">Dune: Part One</h3>
 
                             <div class="card-info">
-                                <span class="genre">Action/Adventure/Drama</span>
-                                <span class="year">2021</span>
+                                <span class="genre action adventure drama">Action/Adventure/Drama</span>
+                                <span class="year 2021">2021</span>
                             </div>
                         </div>
                     </div>
@@ -448,8 +459,8 @@
                             <h3 class="card-title">Captain Marvel</h3>
 
                             <div class="card-info">
-                                <span class="genre">Action/Adventure/Sci-Fi</span>
-                                <span class="year">2019</span>
+                                <span class="genre action adventure sci-fi">Action/Adventure/Sci-Fi</span>
+                                <span class="year 2019">2019</span>
                             </div>
                         </div>
                     </div>
@@ -480,8 +491,8 @@
                             <h3 class="card-title">The Dark Knight</h3>
 
                             <div class="card-info">
-                                <span class="genre">Action/Crime/Drama</span>
-                                <span class="year">2018</span>
+                                <span class="genre action crime drama">Action/Crime/Drama</span>
+                                <span class="year 2018">2018</span>
                             </div>
                         </div>
                     </div>
@@ -512,8 +523,8 @@
                             <h3 class="card-title">Avengers: Endgame</h3>
 
                             <div class="card-info">
-                                <span class="genre">Action/Adventure/Drama</span>
-                                <span class="year">2019</span>
+                                <span class="genre action adventure drama">Action/Adventure/Drama</span>
+                                <span class="year 2019">2019</span>
                             </div>
                         </div>
                     </div>
@@ -544,8 +555,8 @@
                             <h3 class="card-title">Spider-Man: No Way Home</h3>
 
                             <div class="card-info">
-                                <span class="genre">Action/Adventure/Fantasy</span>
-                                <span class="year">2021</span>
+                                <span class="genre action adventure fatasy">Action/Adventure/Fantasy</span>
+                                <span class="year 2021">2021</span>
                             </div>
                         </div>
                     </div>
@@ -576,8 +587,8 @@
                             <h3 class="card-title">Guardians of the Galaxy Vol. 3</h3>
 
                             <div class="card-info">
-                                <span class="genre">Action/Adventure/Comedy</span>
-                                <span class="year">2023</span>
+                                <span class="genre action adventure comedy">Action/Adventure/Comedy</span>
+                                <span class="year 2023">2023</span>
                             </div>
                         </div>
                     </div>
@@ -608,8 +619,8 @@
                             <h3 class="card-title">The Lord of the Rings: The Return of the King</h3>
 
                             <div class="card-info">
-                                <span class="genre">Action/Adventure/Drama</span>
-                                <span class="year">2003</span>
+                                <span class="genre action adventure drama">Action/Adventure/Drama</span>
+                                <span class="year 2003">2003</span>
                             </div>
                         </div>
                     </div>
@@ -640,15 +651,16 @@
                             <h3 class="card-title">Ant-Man and the Wasp: Quantumania</h3>
 
                             <div class="card-info">
-                                <span class="genre">Action/Adventure/Comedy</span>
-                                <span class="year">2023</span>
+                                <span class="genre action adventure comedy">Action/Adventure/Comedy</span>
+                                <span class="year 2023">2023</span>
                             </div>
                         </div>
                     </div>
 
                     <div class="movie-card">
                         <div class="card-head">
-                            <img src="./images/movies/Spider-Man-Across-the-Spider-Verse-poster-712x1024.jpg" alt="" class="card-img">
+                            <img src="./images/movies/Spider-Man-Across-the-Spider-Verse-poster-712x1024.jpg" alt=""
+                                class="card-img">
 
                             <div class="card-overlay">
 
@@ -672,8 +684,8 @@
                             <h3 class="card-title">Spider-Man: Across the Spider-Verse</h3>
 
                             <div class="card-info">
-                                <span class="genre">Animation/Action/Adventure</span>
-                                <span class="year">2023</span>
+                                <span class="genre animation action adventure">Animation/Action/Adventure</span>
+                                <span class="year 2023">2023</span>
                             </div>
                         </div>
                     </div>
@@ -704,8 +716,8 @@
                             <h3 class="card-title">Saving Private Ryan</h3>
 
                             <div class="card-info">
-                                <span class="genre">Drama/War</span>
-                                <span class="year">1998</span>
+                                <span class="genre drama war">Drama/War</span>
+                                <span class="year 1998">1998</span>
                             </div>
                         </div>
                     </div>
@@ -736,8 +748,8 @@
                             <h3 class="card-title">Spirited Away</h3>
 
                             <div class="card-info">
-                                <span class="genre">Animation/Adventure/Family</span>
-                                <span class="year">2001</span>
+                                <span class="genre animation adventure family">Animation/Adventure/Family</span>
+                                <span class="year 2001">2001</span>
                             </div>
                         </div>
                     </div>
@@ -768,8 +780,8 @@
                             <h3 class="card-title">Oppenheimer</h3>
 
                             <div class="card-info">
-                                <span class="genre">Biography/Drama/History</span>
-                                <span class="year">2023</span>
+                                <span class="genre biography drama history">Biography/Drama/History</span>
+                                <span class="year 2023">2023</span>
                             </div>
                         </div>
                     </div>
@@ -800,7 +812,7 @@
                             <h3 class="card-title">Hotaru no haka</h3>
 
                             <div class="card-info">
-                                <span class="genre">Animation/Drama/War</span>
+                                <span class="genre animation drama war">Animation/Drama/War</span>
                                 <span class="year">1988</span>
                             </div>
                         </div>
@@ -808,58 +820,58 @@
                 </div>
 
                 <!-- More button -->
-                    <button class="load-more">LOAD MORE</button>
-                    
+                <button class="load-more">LOAD MORE</button>
+
             </section>
 
             <!-- Category section -->
             <section class="category" id="category">
-                <h2 class="section-heading">Categories</h2>
+                <h2 class="section-heading">Category</h2>
                 <div class="category-grid">
 
                     <div class="category-card">
-                       <img src="./images/action.jpg" alt="" class="card-img"> 
+                        <img src="./images/action.jpg" alt="" class="card-img">
                         <div class="name">Action</div>
                         <div class="total"> 100</div>
                     </div>
                     <div class="category-card">
-                        <img src="./images/sci-fi.jpg" alt="" class="card-img"> 
-                         <div class="name">Sci-Fi</div>
-                         <div class="total"> 100</div>
-                     </div>
-                     <div class="category-card">
-                        <img src="./images/horror.jpg" alt="" class="card-img"> 
-                         <div class="name">Horror</div>
-                         <div class="total"> 100</div>
-                     </div>
-                     <div class="category-card">
-                        <img src="./images/funny.jpeg" alt="" class="card-img"> 
-                         <div class="name">Comedy</div>
-                         <div class="total"> 100</div>
-                     </div>
-                     <div class="category-card">
-                        <img src="./images/crime.jpg" alt="" class="card-img"> 
-                         <div class="name">Crime</div>
-                         <div class="total"> 100</div>
-                     </div>
-                     <div class="category-card">
-                        <img src="./images/animated.jpg" alt="" class="card-img"> 
-                         <div class="name">Animation</div>
-                         <div class="total"> 100</div>
-                     </div>
+                        <img src="./images/sci-fi.jpg" alt="" class="card-img">
+                        <div class="name">Sci-Fi</div>
+                        <div class="total"> 100</div>
+                    </div>
+                    <div class="category-card">
+                        <img src="./images/horror.jpg" alt="" class="card-img">
+                        <div class="name">Horror</div>
+                        <div class="total"> 100</div>
+                    </div>
+                    <div class="category-card">
+                        <img src="./images/funny.jpeg" alt="" class="card-img">
+                        <div class="name">Comedy</div>
+                        <div class="total"> 100</div>
+                    </div>
+                    <div class="category-card">
+                        <img src="./images/crime.jpg" alt="" class="card-img">
+                        <div class="name">Crime</div>
+                        <div class="total"> 100</div>
+                    </div>
+                    <div class="category-card">
+                        <img src="./images/animated.jpg" alt="" class="card-img">
+                        <div class="name">Animation</div>
+                        <div class="total"> 100</div>
+                    </div>
 
-                     <div class="category-card">
-                        <img src="./images/drama.jpg" alt="" class="card-img"> 
-                         <div class="name">Drama</div>
-                         <div class="total"> 100</div>
-                     </div>
+                    <div class="category-card">
+                        <img src="./images/adventure.jpg" alt="" class="card-img">
+                        <div class="name">Adventure</div>
+                        <div class="total"> 100</div>
+                    </div>
 
-                     <div class="category-card">
-                        <img src="./images/war.webp" alt="" class="card-img"> 
-                         <div class="name">War</div>
-                         <div class="total"> 100</div>
-                     </div>
-                     
+                    <div class="category-card">
+                        <img src="./images/war.webp" alt="" class="card-img">
+                        <div class="name">War</div>
+                        <div class="total"> 100</div>
+                    </div>
+
                 </div>
             </section>
 
@@ -872,7 +884,7 @@
                             <a href="#"><ion-icon name="logo-facebook"></ion-icon></a>
                             <a href="#"><ion-icon name="logo-instagram"></ion-icon></a>
                             <a href="#"><ion-icon name="logo-youtube"></ion-icon></a>
-                            <a href="#"><ion-icon name="logo-twitter"></ion-icon></a> 
+                            <a href="#"><ion-icon name="logo-twitter"></ion-icon></a>
                         </div>
                     </div>
                     <div class="footer-link">
@@ -903,14 +915,14 @@
 
                             <li class="link-item"><a href="#">Account & Billing</a></li>
                             <li class="link-item"><a href="#">Plans & Pricing</a></li>
-                            <li class="link-item"><a href="#">Supporterd devices</a></li>
+                            <li class="link-item"><a href="#">Supported devices</a></li>
                             <li class="link-item"><a href="#">Accessibility</a></li>
                         </ul>
                     </div>
                 </div>
                 <div class="footer-copyright">
                     <div class="copyright">
-                        <p>&copy; Copyright 2023 CineFlix</p>
+                        <p>&copy; Copyright 2023 Wflex</p>
                     </div>
                     <div class="wrapper">
                         <a href="#">Privacy policy</a>
@@ -919,9 +931,10 @@
                 </div>
             </footer>
         </main>
-    
+
     </div>
-    
+
+
 
 
     <!-- custom js link -->
