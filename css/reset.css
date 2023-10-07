@@ -8,15 +8,28 @@
 
 /* more-intuitive box-sizing model */
 
-*, *::before, *::after {box-sizing: border-box;}
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+}
 
 /* Default font-family */
 
-html {font-family: var(--ff-inter);}
+html {
+    font-family: var(--ff-inter);
+}
 
 /* All heading color */
 
-h1,h2,h3,h4,h5,h6 {color: var(--white);}
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    color: var(--white);
+}
 
 /* Default background & color, 
     Improve text rendering
@@ -40,11 +53,13 @@ img {
 
 /* Remove fron default */
 
-input, button, select {
+input,
+button,
+select {
     font: inherit;
-    background:none;
+    background: none;
     border: none;
-    outline:none;
+    outline: none;
 }
 
 /* Add button default */
@@ -56,7 +71,9 @@ button {
 
 /* Remove list item marker */
 
-li {list-style: none;}
+li {
+    list-style: none;
+}
 
 /* Change link default */
 
@@ -78,4 +95,3 @@ a {
     border-radius: 5cm;
     border: 3px solid var(--rich-black-fogra-29);
 }
-

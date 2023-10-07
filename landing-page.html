@@ -26,11 +26,12 @@
                 </button>
 
                 <a href="#" class="navbar-brand">
-                    <button onClick="window.location.reload();"><img src="./images/icon/favicon-32x32.png" alt=""></button>
+                    <button onClick="window.location.reload();"><img src="./images/icon/favicon-32x32.png"
+                            alt=""></button>
                 </a>
-                
+
                 <!-- Navbar navigation -->
-                
+
                 <nav class="">
                     <ul class="navbar-nav">
                         <li><a href="#" class="navbar-link">Home</a></li>
@@ -43,35 +44,36 @@
                 <div class="navbar-actions">
                     <form action="#" class="navbar-form ">
                         <input type="text" name="search" placeholder=" Search..." class="navbar-form-search">
-                    
+
                         <button class="navbar-form-btn">
-                        <ion-icon name="search-outline"></ion-icon>
+                            <ion-icon name="search-outline"></ion-icon>
                         </button>
 
                         <button class="navbar-form-close">
                             <ion-icon name="close-circle-outline"></ion-icon>
                         </button>
                     </form>
-                        <!-- Search button for small screen -->
-                        <button class="navbar-search-btn">
-                            <ion-icon name="search-outline"></ion-icon>
-                        </button>
-                    
-                        <a href="./login-page.html" class="navbar-signin">
-                            <span>Sign in</span>
-                            <ion-icon name="log-in-outline"></ion-icon>
-                        </a>  
+                    <!-- Search button for small screen -->
+                    <button class="navbar-search-btn">
+                        <ion-icon name="search-outline"></ion-icon>
+                    </button>
+
+                    <a href="./login-page.html" class="navbar-signin">
+                        <span>Sign in</span>
+                        <ion-icon name="log-in-outline"></ion-icon>
+                    </a>
                 </div>
             </div>
         </header>
-    
+
         <!-- MAIN SECTION -->
         <main>
 
             <!-- Banner section -->
             <section class="banner">
                 <div class="banner-card">
-                    <a href=""><img src="./images/movies/john-wick-4-poster-4k-wallpaper-uhdpaper.com-641@0@g.jpg" class="banner-img" ></a>
+                    <a href=""><img src="./images/movies/john-wick-4-poster-4k-wallpaper-uhdpaper.com-641@0@g.jpg"
+                            class="banner-img"></a>
                     <div class="card-content">
                         <div class="card-info">
                             <div class="genre">
@@ -93,7 +95,7 @@
                         </div>
                         <h2 class="card-title" style="text-shadow: gray 1px;">John Wick: Chapter 4</h2>
                     </div>
-                    
+
                 </div>
             </section>
 
@@ -105,19 +107,19 @@
 
                     <div class="filter-dropdowns">
 
-                        <select name="genre" class="genre">
-                            <option value="all genres" onclick="filterSelection('all')">All Genres</option>
-                            <option value="action" onclick="filterSelection('action')" > Action</option>
-                            <option value="adventure" onclick="filterSelection('adventure')" > Adventure</option>
-                            <option value="sci-fi" onclick="filterSelection('sci-fi')">Sci-Fi</option>
-                            <option value="animation" onclick="filterSelection('animation')">Animation</option>
-                            <option value="war" onclick="filterSelection('war')">War</option>
-                            <option value="horror" onclick="filterSelection('horror')">Horror</option>
-                            <option value="comedy" onclick="filterSelection('comedy')">Comedy</option>
-                            <option value="crime" onclick="filterSelection('crime')">Crime</option>
+                        <select name="genre" class="genre" id="genre-filter">
+                            <option value="all">All Genres</option>
+                            <option value="action"> Action</option>
+                            <option value="adventure"> Adventure</option>
+                            <option value="sci-fi">Sci-Fi</option>
+                            <option value="animation">Animation</option>
+                            <option value="war">War</option>
+                            <option value="horror">Horror</option>
+                            <option value="comedy">Comedy</option>
+                            <option value="crime">Crime</option>
                         </select>
 
-                        <select name="year" class="year" >
+                        <select name="year" class="year">
                             <option value="all years">All the years</option>
                             <option value="2024">2024</option>
                             <option value="2020-2023">2020-2023</option>
@@ -131,7 +133,7 @@
                     <div class="filter-radios">
                         <input type="radio" name="grade" id="featured" checked>
                         <label for="featured">Featured</label>
-                        
+
                         <input type="radio" name="grade" id="popular">
                         <label for="popular">Popular</label>
 
@@ -656,7 +658,8 @@
 
                     <div class="movie-card">
                         <div class="card-head">
-                            <img src="./images/movies/Spider-Man-Across-the-Spider-Verse-poster-712x1024.jpg" alt="" class="card-img">
+                            <img src="./images/movies/Spider-Man-Across-the-Spider-Verse-poster-712x1024.jpg" alt=""
+                                class="card-img">
 
                             <div class="card-overlay">
 
@@ -816,8 +819,8 @@
                 </div>
 
                 <!-- More button -->
-                    <button class="load-more">LOAD MORE</button>
-                    
+                <button class="load-more">LOAD MORE</button>
+
             </section>
 
             <!-- Category section -->
@@ -826,48 +829,48 @@
                 <div class="category-grid">
 
                     <div class="category-card">
-                       <img src="./images/action.jpg" alt="" class="card-img"> 
+                        <img src="./images/action.jpg" alt="" class="card-img">
                         <div class="name">Action</div>
                         <div class="total"> 100</div>
                     </div>
                     <div class="category-card">
-                        <img src="./images/sci-fi.jpg" alt="" class="card-img"> 
-                         <div class="name">Sci-Fi</div>
-                         <div class="total"> 100</div>
-                     </div>
-                     <div class="category-card">
-                        <img src="./images/horror.jpg" alt="" class="card-img"> 
-                         <div class="name">Horror</div>
-                         <div class="total"> 100</div>
-                     </div>
-                     <div class="category-card">
-                        <img src="./images/funny.jpeg" alt="" class="card-img"> 
-                         <div class="name">Comedy</div>
-                         <div class="total"> 100</div>
-                     </div>
-                     <div class="category-card">
-                        <img src="./images/crime.jpg" alt="" class="card-img"> 
-                         <div class="name">Crime</div>
-                         <div class="total"> 100</div>
-                     </div>
-                     <div class="category-card">
-                        <img src="./images/animated.jpg" alt="" class="card-img"> 
-                         <div class="name">Animation</div>
-                         <div class="total"> 100</div>
-                     </div>
+                        <img src="./images/sci-fi.jpg" alt="" class="card-img">
+                        <div class="name">Sci-Fi</div>
+                        <div class="total"> 100</div>
+                    </div>
+                    <div class="category-card">
+                        <img src="./images/horror.jpg" alt="" class="card-img">
+                        <div class="name">Horror</div>
+                        <div class="total"> 100</div>
+                    </div>
+                    <div class="category-card">
+                        <img src="./images/funny.jpeg" alt="" class="card-img">
+                        <div class="name">Comedy</div>
+                        <div class="total"> 100</div>
+                    </div>
+                    <div class="category-card">
+                        <img src="./images/crime.jpg" alt="" class="card-img">
+                        <div class="name">Crime</div>
+                        <div class="total"> 100</div>
+                    </div>
+                    <div class="category-card">
+                        <img src="./images/animated.jpg" alt="" class="card-img">
+                        <div class="name">Animation</div>
+                        <div class="total"> 100</div>
+                    </div>
 
-                     <div class="category-card">
-                        <img src="./images/adventure.jpg" alt="" class="card-img"> 
-                         <div class="name">Adventure</div>
-                         <div class="total"> 100</div>
-                     </div>
+                    <div class="category-card">
+                        <img src="./images/adventure.jpg" alt="" class="card-img">
+                        <div class="name">Adventure</div>
+                        <div class="total"> 100</div>
+                    </div>
 
-                     <div class="category-card">
-                        <img src="./images/war.webp" alt="" class="card-img"> 
-                         <div class="name">War</div>
-                         <div class="total"> 100</div>
-                     </div>
-                     
+                    <div class="category-card">
+                        <img src="./images/war.webp" alt="" class="card-img">
+                        <div class="name">War</div>
+                        <div class="total"> 100</div>
+                    </div>
+
                 </div>
             </section>
 
@@ -880,7 +883,7 @@
                             <a href="#"><ion-icon name="logo-facebook"></ion-icon></a>
                             <a href="#"><ion-icon name="logo-instagram"></ion-icon></a>
                             <a href="#"><ion-icon name="logo-youtube"></ion-icon></a>
-                            <a href="#"><ion-icon name="logo-twitter"></ion-icon></a> 
+                            <a href="#"><ion-icon name="logo-twitter"></ion-icon></a>
                         </div>
                     </div>
                     <div class="footer-link">
@@ -927,9 +930,9 @@
                 </div>
             </footer>
         </main>
-    
+
     </div>
-    
+
 
 
     <!-- custom js link -->
