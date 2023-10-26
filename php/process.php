@@ -16,10 +16,11 @@ $firstname = $_POST['firstname'];
 $lastname= $_POST['lastname'];
 $username = $_POST['username'];
 $password = $_POST['password'];
+$encrypted_password = md5($password);
 $email = $_POST['email'];
 
 // Insert data into the database
-$sql = "INSERT INTO user (firstname, lastname, username, password, email) VALUES ('$firstname','$lastname','$username', '$password', '$email')";
+$sql = "INSERT INTO user (firstname, lastname, username, password, email) VALUES ('$firstname','$lastname','$username', '$encrypted_password', '$email')";
 
 if ($conn->query($sql) === TRUE) {
     echo "Data inserted successfully";

@@ -41,3 +41,10 @@ document.getElementById("genre-filter").addEventListener("change", function() {
       }
   });
 });
+
+document.getElementById("year-filter").addEventListener("change", function() {
+  var selectedYear=this.value;
+  var yearCards = document.querySelectorAll(".year");
+
+  
+})
