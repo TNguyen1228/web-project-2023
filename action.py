@@ -2,7 +2,7 @@ import base64
 from fastapi.responses import FileResponse
 from fastapi.staticfiles import StaticFiles
 import mysql.connector
-from fastapi import FastAPI, HTTPException
+from fastapi import FastAPI, Form
 from pydantic import BaseModel
 
 
@@ -14,7 +14,7 @@ database = "sql_web"
 app=FastAPI()
 
 # Mount the "static" directory as a static folder to serve files
-app.mount("/landing", StaticFiles(directory="web_deploy"), name="static")
+app.mount("/static", StaticFiles(directory="static"))
 
 
 try:
@@ -35,21 +35,29 @@ class userCreate(BaseModel):
     password: str
     email: str | None = None
 
-@app.post("/register/")
-async def add_user(user:userCreate):
-    password=user.password.encode("utf-8")
-    encoded=base64.b64encode(password)
-    
-    # Define the SQL query to insert user data
-    insert_query = "INSERT INTO users (firstname, lastname, username, password, email) VALUES (%s, %s, %s, %s, %s)"
-
+@app.post("/registered")
+async def add_user(firstname: str = Form(...), 
+                    lastname: str = Form(...),
+                    username: str = Form(...),
+                    password: str = Form(...),
+                    email: str = Form(None)):
+    password=password.encode("utf-8")
+    encoded_password=base64.b64encode(password).decode("utf-8")
     # Execute the query
-    cursor.execute(insert_query, (user.firstname, user.lastname, user.username, encoded, user.email))
+    cursor.execute(f"INSERT INTO users (firstname, lastname, username, password, email) VALUES ('{firstname}', '{lastname}', '{username}', '{encoded_password}' , '{email}')")
 
     # Commit the changes to the database
     conn.commit()
+    return 
 
-@app.get("/")
+@app.get("/main")
 async def read_root():
-    return FileResponse("landing-page.html")
-    
+    return FileResponse("static/landing-page.html")
+
+@app.get("/login")
+async def login():
+    return FileResponse("static/login-page.html")
+
+@app.get("/register")
+async def register():
+    return FileResponse("static/register-page.html")
