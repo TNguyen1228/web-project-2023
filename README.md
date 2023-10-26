@@ -1,7 +1,7 @@
 # web-project-2023
 
 # Idea
--Simple web design for watch and search film, include login and register page, but need to connect to database through XAMPP
+-Simple web design for watch and search film, include login and register page, but need to connect to database through XAMPP using fastAPI
 
 # Download and Install XAMPP:
 
