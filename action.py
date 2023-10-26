@@ -1,5 +1,6 @@
 import base64
 from fastapi.responses import FileResponse
+from fastapi.staticfiles import StaticFiles
 import mysql.connector
 from fastapi import FastAPI, HTTPException
 from pydantic import BaseModel
@@ -11,6 +12,10 @@ password = ""
 database = "sql_web"
 
 app=FastAPI()
+
+# Mount the "static" directory as a static folder to serve files
+app.mount("/landing", StaticFiles(directory="web_deploy"), name="static")
+
 
 try:
     conn = mysql.connector.connect(
