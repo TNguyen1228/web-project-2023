@@ -11,17 +11,9 @@ Start XAMPP:
 
 After installation, start XAMPP.
 Start the Apache and MySQL services from the XAMPP control panel.
-Create a Folder for Your Project:
 
-Create a folder in the htdocs directory within your XAMPP installation folder. For example, if you installed XAMPP on Windows, you might create a folder like C:\xampp\htdocs\myproject.
-Place Your HTML and PHP Files:
+# Running
 
-Save your HTML file (e.g., index.html) in the project folder.
-Create a PHP file (e.g., process.php) and save it in the same folder.
-Access Your Project:
+- Before running you first need to install the uvicorn in the terminal:
 
-Open a web browser and navigate to http://localhost/myproject/index.html (replace myproject with the actual folder name you created). You should see your HTML form.
-When you submit the form, the data will be sent to your process.php script on the server.
-Debug and Test:
-
-You can use the XAMPP control panel to access PHP error logs and MySQL databases for debugging and testing as needed.
+    
