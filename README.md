@@ -18,5 +18,6 @@ Start the Apache and MySQL services from the XAMPP control panel.
    `pip install mysql-connector-python`
 
 # Running
-- On terminal, you need to locate to the file contain first using `cd` command
+- On terminal, you need to locate to the file contain first using `cd` command, after that run the follow code:
   `uvicorn action:app --reload`
+- Open browser and run [(127.0.0.1:8000)]
