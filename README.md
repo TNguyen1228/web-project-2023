@@ -12,8 +12,11 @@ Start XAMPP:
 After installation, start XAMPP.
 Start the Apache and MySQL services from the XAMPP control panel.
 
+# Required:
+   `pip install fastapi`
+   `pip install uvicorn`
+   `pip install mysql-connector-python`
+
 # Running
-
-- Before running you first need to install the uvicorn in the terminal:
-
-    
+- On terminal, you need to locate to the file contain first using `cd` command
+  `uvicorn action:app --reload`
