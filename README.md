@@ -16,4 +16,3 @@ Start the Apache and MySQL services from the XAMPP control panel.
 
 - Before running you first need to install the uvicorn in the terminal:
 
-    
