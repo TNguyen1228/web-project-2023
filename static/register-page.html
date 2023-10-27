@@ -155,6 +155,43 @@
       </div>
     </form>
   </div>
+  <script>
+    document.addEventListener("DOMContentLoaded", function() {
+      const form = document.getElementById("userForm");
+      const usernameInput = document.getElementById("username");
+      const submitButton = document.querySelector('button[type="submit"]');
+      // Function to enable or disable the submit button
+      function toggleSubmitButton(enabled) {
+          submitButton.disabled = !enabled;
+      }
+      usernameInput.addEventListener("blur", async () => {
+        const username = usernameInput.value;
+        if (username.trim() === "") {
+            return;
+        }
+
+        // Perform an asynchronous request to check for a duplicate username
+        try {
+            const response = await fetch(`/check_duplicate_username?username=${username}`);
+            const data = await response.json();
+
+            if (data.exists) {
+              // Display a message if the username already exists
+              alert("Username is already taken. Please choose a different username.");
+              toggleSubmitButton(false);
+            }else{
+              toggleSubmitButton(true);
+            }   
+        } catch (error) {
+            console.error("Error checking for duplicate username:", error);
+        }
+        });
+
+      form.addEventListener("submit", function(event) {
+        // Add any other client-side validation you need here
+      });
+    });
+  </script>
 </body>
 
 </html>

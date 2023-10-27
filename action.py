@@ -1,9 +1,8 @@
 import base64
-from fastapi.responses import FileResponse
+from fastapi.responses import FileResponse, RedirectResponse
 from fastapi.staticfiles import StaticFiles
 import mysql.connector
-from fastapi import FastAPI, Form
-from pydantic import BaseModel
+from fastapi import FastAPI, Form, HTTPException
 
 
 host = "localhost"
@@ -26,14 +25,7 @@ try:
     )
     cursor=conn.cursor()
 except Exception as e:
-    print(f"Lỗi: {e}")
-
-class userCreate(BaseModel):
-    firstname: str
-    lastname: str
-    username: str
-    password: str
-    email: str | None = None
+    print(f"Error: {e}")
 
 @app.post("/registered")
 async def add_user(firstname: str = Form(...), 
@@ -43,7 +35,9 @@ async def add_user(firstname: str = Form(...),
                     email: str = Form(None)):
     password=password.encode("utf-8")
     encoded_password=base64.b64encode(password).decode("utf-8")
+    
     # Execute the query
+
     cursor.execute(f"INSERT INTO users (firstname, lastname, username, password, email) VALUES ('{firstname}', '{lastname}', '{username}', '{encoded_password}' , '{email}')")
 
     # Commit the changes to the database
@@ -61,3 +55,21 @@ async def login():
 @app.get("/register")
 async def register():
     return FileResponse("static/register-page.html")
+
+@app.get("/user_login")
+async def user_login(username, password):
+    cursor.execute(f"SELECT * FROM users WHERE username='{username}' AND password='{password}'")
+    result=cursor.fetchone()
+    if result:
+        response = FileResponse('/main')
+        return response
+    else:
+        raise HTTPException(status_code=401, detail="Login failed")
+    return None
+
+@app.get("/check_duplicate_username")
+async def check_username(username: str):
+    cursor.execute(f"SELECT * FROM users WHERE username='{username}'")
+    result=cursor.fetchone()
+
+    return{"exists": result}
