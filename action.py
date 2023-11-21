@@ -1,5 +1,5 @@
 import base64
-from fastapi.responses import FileResponse, RedirectResponse
+from fastapi.responses import FileResponse
 from fastapi.staticfiles import StaticFiles
 import mysql.connector
 from fastapi import FastAPI, Form, HTTPException
